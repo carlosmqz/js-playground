@@ -98,22 +98,90 @@ console.log(listItems); */
 // })
 
 //document.querySelectorAll
-const items = document.querySelectorAll('ul.collection li.collection-item');
+// const items = document.querySelectorAll('ul.collection li.collection-item');
 
-items.forEach(function(item, index){
-    item.textContent = `${index}: Hello`
-});
+// items.forEach(function(item, index){
+//     item.textContent = `${index}: Hello`
+// });
 
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
+// const liOdd = document.querySelectorAll('li:nth-child(odd)');
+// const liEven = document.querySelectorAll('li:nth-child(even)');
 
-liOdd.forEach(function(li, index){
-    li.style.background = '#ccc';
-});
+// liOdd.forEach(function(li, index){
+//     li.style.background = '#ccc';
+// });
 
-for(let i = 0; i < liEven.length; i++){
-    liEven[i].style.background = '#f4f4f4';
-}
+// for(let i = 0; i < liEven.length; i++){
+//     liEven[i].style.background = '#f4f4f4';
+// }
 
-console.log(items);
+// console.log(items);
+
+// let val;
+
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.collection-item:first-child');
+
+// val = listItem;
+// val = list;
+
+// //Get child nodes
+// val = list.childNodes;
+
+// //Get children element nodes
+// val = list.children;
+// val = list.children[0];
+
+// list.children[0].textContent = 'Hello';
+// //Children of children
+// val = list.children[3].children[0];
+// //first child
+// val = list.firstChild;
+// val = list.firstElementChild; //No text nodes.
+// //last child
+// val = list.lastChild;
+// val = list.lastElementChild;
+
+// //count child elements.
+// val = list.childElementCount;
+
+// //Get parent node
+// val = listItem.parentNode;
+// val = listItem.parentElement;
+// val = listItem.parentElement.parentElement;
+
+// //Get next sibling
+// val = listItem.nextSibling;
+// val = listItem.nextElementSibling.nextElementSibling;
+
+// //Get previous sibling
+// val = listItem.previousSibling;
+// val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// console.log(val);
+
+//Create element to add it to HTML form
+const li = document.createElement('li');
+
+//Add a class
+li.className = 'collection-item';
+li.id = 'new-item';
+li.setAttribute('title','New Item');
+//Create text node and append
+li.appendChild(document.createTextNode('Hello World!'));
+
+//Create new link element
+const link = document.createElement('a');
+//add classes
+link.className = 'delete-item secondary-content';
+// Add icon html
+link.innerHTML =  '<i class="fa fa-remove"></i>';
+
+//Append link into li
+li.appendChild(link);
+
+//append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li)
 
