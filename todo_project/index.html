@@ -11,17 +11,20 @@
 <body>
     <div class="row">
         <div class="col s12 m6">
-            <form action="index.php">
+            <form action="#">
                 <div class="card">
                     <div class="card-content">
                         <h5 class="card-title">ToDo Task Manager</h5>
                         <input type="text" name="" id="newTask" placeholder="Input your task here" class="card-item">
                     </div>
                     <div class="card-action">
-                        <input type="submit" class="btn black" value="Add Task">
+                        <input type="submit" class="btn" value="Add Task">
+                        <input type="text" name="filter" id="filter">
+                        <label for="filter">Filter Tasks</label>
                         <ul id="todoList" class="collection">
                                 <!--<li class="collection-item">item <a href="#" class="secondary-content"><i class="material-icons">clear</i></a></li>-->
                         </ul>
+                        <input type="button" value="Clear Tasks" id="clear-tasks" class="btn black">
                     </div>
                 </div>
             </form>
